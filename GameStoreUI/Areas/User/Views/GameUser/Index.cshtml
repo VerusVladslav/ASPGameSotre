@@ -1,0 +1,18 @@
+﻿@model IEnumerable<GameStoreUI.Models.VIewModel.GameCreateViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout1.cshtml";
+}
+
+@{ Html.RenderPartial("Partial/Sidebar"); }
+<div class="container my-container">
+    
+
+    <div id="games">
+
+        @{ Html.RenderPartial("Partial/GamePartial", Model); }
+    </div>
+
+</div>
+

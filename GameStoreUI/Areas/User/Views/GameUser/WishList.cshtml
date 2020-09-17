@@ -1,0 +1,17 @@
+﻿@model IEnumerable<GameStoreUI.Models.VIewModel.GameCreateViewModel>
+@{
+    ViewBag.Title = "WishList";
+    Layout = "~/Areas/User/Views/Shared/_Layout1.cshtml";
+}
+
+
+
+<div class="container my-container">
+
+
+    <div id="games">
+
+        @{ Html.RenderPartial("Partial/WhishlistPart", Model); }
+    </div>
+
+</div>

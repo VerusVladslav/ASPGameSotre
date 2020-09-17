@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using GameDAL.Entities;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
@@ -20,10 +21,15 @@ namespace GameStoreCoursework.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Genre> Genres { get; set; }
+        public DbSet<Developer> Developers { get; set; }
+        public DbSet<Game> Games { get; set; }
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("name=GameConnectionString", throwIfV1Schema: false)
         {
+            
         }
+      
 
         public static ApplicationDbContext Create()
         {

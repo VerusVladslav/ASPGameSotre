@@ -1,0 +1,92 @@
+﻿@model IEnumerable<GameStoreUI.Models.VIewModel.UserRolesViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout1.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin</title>
+</head>
+<body>
+   
+    <p>
+        @*@Html.ActionLink("Create New", "Create")*@
+    </p>
+    <div class="container">
+
+
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">User</th>
+                    <th scope="col">Roles</th>
+                    <th scope="col"></th>
+
+                </tr>
+            </thead>
+
+
+            <tbody>
+                @foreach (var item in Model)
+                { @*@using (@Html.BeginForm("Delete", "Game", new { id = item.Id }, FormMethod.Post))
+                    {*@
+
+                using (@Html.BeginForm("Set", "AccountMange",new { id=item.Id}, FormMethod.Post))
+                {
+
+
+
+
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.User)
+                                </td>
+                                <td>
+
+                                    <select id="Role" name="Role" class="form-control">
+
+                                        @foreach (var role in ViewBag.Roles)
+                                        {
+                                            if (item.Role == role)
+                                            {
+                                                <option selected>
+                                                    @role
+                                                </option>
+                                            }
+                                            else
+                                            {
+
+                                                <option>
+                                                    @role
+                                                </option>
+                                            }
+                                        }
+                                    </select>
+                                </td>
+
+                                <td>
+                                    @*<a class="btn btn-primary" href='@Url.Action("Set", "AccountMange", routeValues: new { user=item})'>Edit</a>*@
+
+                                    @*@Html.ActionLink("Set", "Set", new { user = item })*@
+                                    <input type="submit" value="Set" class="btn btn-primary" />
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+
+
+        </table>
+
+    </div>
+</body>
+</html>
+
+
+
+

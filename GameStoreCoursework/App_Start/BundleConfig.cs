@@ -25,6 +25,15 @@ namespace GameStoreCoursework
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/Content/AllScriptsLayout").Include(
+                 "~/Scripts/jquery-3.4.1.js",
+                  "~/Scripts/popper.js",
+                  "~/Scripts/bootstrap.min.js",
+                  "~/Scripts/adminite.js",
+                  "~/Scripts/script.js"
+
+              ));
         }
     }
 }

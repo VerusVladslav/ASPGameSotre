@@ -1,0 +1,37 @@
+﻿body {
+}
+
+
+span {
+    margin-left: 40px;
+}
+
+.mycard {
+    margin-top: 20px;
+    position: relative;
+    padding-top: 40px;
+    border: 1px solid gray;
+}
+
+    .mycard img {
+        float: left;
+        margin-left: 20px;
+        width: 200px;
+        margin-right: 20px;
+    }
+
+.cardbody {
+    padding-left: 40px;
+}
+
+.jumbotron {
+    background-image: url("https://www.frostpunkgame.com/wp-content/uploads/2019/10/bg.jpg")
+}
+
+.lead {
+    color: white;
+}
+
+.display-4 {
+    color: white;
+}

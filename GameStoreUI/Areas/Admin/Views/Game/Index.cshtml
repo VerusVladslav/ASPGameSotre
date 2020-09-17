@@ -1,0 +1,22 @@
+﻿@model IEnumerable<GameStoreUI.Models.VIewModel.GameCreateViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout1.cshtml";
+}
+
+@{ Html.RenderPartial("Partial/Sidebar"); }
+<div class="container my-container">
+    <p>
+        <a class="btn btn-primary" href='@Url.Action("Create","Game",routeValues: null)'>Create new game</a>
+
+        @*@Html.ActionLink("Create New game", "Create", new { @class = "btn btn-primary" })*@
+    </p>
+
+    <div id="games">
+
+        @{ Html.RenderPartial("Partial/GamePartial", Model); }
+    </div>
+
+</div>
+

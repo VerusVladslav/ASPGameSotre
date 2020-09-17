@@ -1,0 +1,19 @@
+﻿@model IEnumerable<GameStoreUI.Models.VIewModel.GenreView>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="container my-container">
+    <p>
+        <a class="btn btn-primary" href='@Url.Action("Create","Genre",routeValues: null)'>Create new genre</a>
+
+        @*@Html.ActionLink("Create New Genre", "Create", new { @class = "btn btn-primary" })*@
+    </p>
+
+    <div id="genres">
+
+        @{ Html.RenderPartial("Partial/GenrePartial", Model); }
+    </div>
+</div>
